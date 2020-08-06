@@ -1,4 +1,6 @@
-README.md: readme.txt
+all: README.md
+	
+README.md: README.md
 	echo "# Guess the number of files!" > readme.txt
 	echo 'The time at which make was run: ' >> readme.txt
 	history >> readme.txt
