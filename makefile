@@ -1,12 +1,14 @@
 all: README.md
 	
-README.md: README.md
-	echo "# Guess the number of files!" > readme.txt
-	echo 'The time at which make was run: ' >> readme.txt
-	history >> readme.txt
-	echo "The number of lines of code in **guessinggame.sh**:" >> readme.txt
-	wc -l < guessinggame.sh >> readme.txt
+README.md: guessinggame.sh
+	touch README.md
+	echo "# Guess the number of files!" > README.md
+	echo $$(date) >> README.md
+	echo "  \n" >> README.md
+	echo "The number of lines of code in **guessinggame.sh**:" >> README.md
+	wc -l < guessinggame.sh >> README.md
 
-
+clean:
+	rm README.md
 
 
